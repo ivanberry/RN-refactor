@@ -2,6 +2,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ListView, ActivityIndicator } from 'react-native';
 
+import BidListItem from './BidListItem';
+
 import axios from 'axios';
 
 class BidList extends React.Component {
@@ -27,7 +29,7 @@ class BidList extends React.Component {
             page: 1,
         })
             .then((res) => {
-                console.log(res.data.bidlist, this);
+                console.log(res.data.bidlist);
                 this.setState({
                     dataSource: ds.cloneWithRows(res.data.bidlist)
                 });
@@ -35,10 +37,6 @@ class BidList extends React.Component {
             .catch((err) => {
                 console.log(err);
             })
-    }
-
-    renderListItem(item) {
-
     }
 
     render() {
@@ -50,7 +48,7 @@ class BidList extends React.Component {
                 {this.state.dataSource &&
                     <ListView
                         dataSource={this.state.dataSource}
-                        renderRow={(rowData) => <Text>{rowData.ws_name + '-' + rowData.title}</Text>}
+                    renderRow={(rowData) => <BidListItem {...rowData} />}
                     />
                 }
             </View>
