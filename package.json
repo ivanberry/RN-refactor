@@ -1,5 +1,5 @@
 {
-  "name": "fclc2-native",
+  "name": "react-native-currency-calculator",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -31,7 +31,9 @@
   "dependencies": {
     "axios": "^0.16.2",
     "expo": "^19.0.0",
+    "prop-types": "^15.5.10",
     "react": "16.0.0-alpha.12",
-    "react-native": "^0.46.1"
+    "react-native": "^0.46.1",
+    "react-native-extended-stylesheet": "^0.6.0"
   }
 }

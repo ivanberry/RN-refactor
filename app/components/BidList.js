@@ -19,7 +19,7 @@ class BidList extends React.Component {
     }
 
     getBidListsItem() {
-        const URL = 'http://192.168.0.66/mock/bidlist_v2';
+        const URL = 'http://192.168.0.66/wrb/biditems.json?m=bidlist_v4';
         const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 
         axios.post(URL, {
