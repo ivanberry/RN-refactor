@@ -22,10 +22,14 @@ class Home extends Component {
                 <InputWithButton
                     buttonText={TEMP_BASS_CURRENCY}
                     onPress={this.handlerPress}
+                    defaultValue={TEMP_BASE_PRICE}
+                    keyboardType='numeric'
+                    
                 />
                 <InputWithButton
                     buttonText={TEMP_QUOTE_CURRENCY}
                     onPress={this.handlerPress}
+                    defaultValue={TEMP_QUOTE_PRIE}
                     editable={false}
                 />
             </Container>

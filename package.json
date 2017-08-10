@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "color": "^2.0.0",
     "expo": "^19.0.0",
     "prop-types": "^15.5.10",
     "react": "16.0.0-alpha.12",
