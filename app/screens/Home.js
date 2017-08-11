@@ -3,6 +3,7 @@ import { StatusBar } from 'react-native';
 import { Container, styles } from '../components/Container';
 import { Logo } from '../components/Logo';
 import { InputWithButton } from '../components/TextInput';
+import { ClearButton } from '../components/Buttons';
 
 const TEMP_BASS_CURRENCY = 'CNY';
 const TEMP_QUOTE_CURRENCY = 'USD';
