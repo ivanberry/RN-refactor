@@ -35,7 +35,7 @@ export default EStyleSheet.create({
     },
     seperator: {
         height: INPUT_HEIGHT,
-        width: StyleSheet.hairlineWidth,
+        width: EStyleSheet.hairlineWidth,
         backgroundColor: '$border',
     },
     input: {
