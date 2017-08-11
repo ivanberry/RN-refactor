@@ -15,6 +15,10 @@ class Home extends Component {
         console.log('base press');
     }
 
+    handleSwapCurrency = () => {
+        console.log('swap currency happened!');
+    }
+
     render() {
         return (
             <Container>
@@ -25,7 +29,7 @@ class Home extends Component {
                     onPress={this.handlerPress}
                     defaultValue={TEMP_BASE_PRICE}
                     keyboardType='numeric'
-                    
+
                 />
                 <InputWithButton
                     buttonText={TEMP_QUOTE_CURRENCY}
@@ -33,6 +37,10 @@ class Home extends Component {
                     defaultValue={TEMP_QUOTE_PRIE}
                     editable={false}
                 />
+                  <ClearButton
+                    onPress={this.handleSwapCurrency}
+                    text="Reverse Currency"
+                />  
             </Container>
         );
     }
