@@ -10,6 +10,7 @@ EStylesSheet.build({
   $border: '#e2e2e2',
   $inputText: '#797979',
   $lightGray: '#f0f0f0',
+  $darkText: '#343434',
   outline: 1, //show the block view of element
 });
 
