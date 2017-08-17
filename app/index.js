@@ -11,7 +11,7 @@ EStylesSheet.build({
   $inputText: '#797979',
   $lightGray: '#f0f0f0',
   $darkText: '#343434',
-  outline: 1, //show the block view of element
+  // outline: 1, //show the block view of element
 });
 
 

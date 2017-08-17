@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, FlatList, View, StatusBar } from 'react-native';
 
 import currencies from '../data/currencies';
-import ListItem from '../components/List';
+import { ListItem, Separator } from '../components/List';
 
 class CurrencyList extends Component {
     hanlePress = () => {
@@ -11,13 +11,21 @@ class CurrencyList extends Component {
 
     render() {
         return (
-            <FlatList
-                data={currencies}
-                renderItem={({ item }) => (
-                    <Text>{item}</Text>
-                )}
-                keyExtractor={item => item}
-            />
+            <View style={{ flex: 1 }}>
+                <StatusBar translucent={false} barStyle="default" />
+                <FlatList
+                    data={currencies}
+                    renderItem={({ item }) => (
+                        <ListItem
+                            text={item}
+                            selected={item === 'CAD'}
+                            onPress={this.hanlePress}
+                        />
+                    )}
+                    keyExtractor={item => item}
+                    ItemSeparatorComponent={Separator}
+                />
+            </View>
         )
 
     }
