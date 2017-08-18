@@ -3,10 +3,22 @@ import { View, Image } from 'react-native';
 
 import styles from './styles';
 
-const Icon = () => (
-    <View style={styles.icon}>
-        <Image resizeMode='contain' source={require('./icon/check.png')} style={styles.iconVisible} />
-    </View>
-);
+const Icon = ({ checkmarked, visible }) => {
+    const iconStyle = [styles.icon];
+
+    if (visible) {
+        iconStyle.push(styles.iconVisible);
+    }
+
+    return (
+        <View style={iconStyle}>
+            {checkmarked ?
+                <Image resizeMode='contain' style={styles.checkmarked} source={require('./images/check.png')} />
+                :
+                null
+            }
+        </View>
+    )
+};
 
 export default Icon;

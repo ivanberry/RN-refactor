@@ -21,13 +21,18 @@ const styles = EStyleSheet.create({
         height: StyleSheet.hairlineWidth,
     },
     icon: {
-    },
-    iconVisible: {
         backgroundColor: 'transparent',
         width: 30,
         height: 30,
         borderRadius: 15,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    iconVisible: {
         backgroundColor: '$primayGreen',
+    },
+    checkmarked: {
+        width: 16,
     }
 });
 

@@ -20,6 +20,8 @@ class CurrencyList extends Component {
                             text={item}
                             selected={item === 'CAD'}
                             onPress={this.hanlePress}
+                            checkmarked={true}
+                            visible={true}
                         />
                     )}
                     keyExtractor={item => item}
