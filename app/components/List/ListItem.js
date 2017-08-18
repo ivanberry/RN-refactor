@@ -2,6 +2,7 @@ import React from 'react';
 import { TouchableHighlight, View, Text } from 'react-native';
 import PropTypes from 'prop-types';
 
+import Icon from './Icon';
 import styles from './styles';
 
 const ListItem = ({ text, onPress, selected }) => (
@@ -10,7 +11,7 @@ const ListItem = ({ text, onPress, selected }) => (
             <Text style={styles.text}>
                 {text}
             </Text>
-            {selected ? <Text>Selected</Text> : null}
+            {selected ? <Icon /> : null}
         </View>
     </TouchableHighlight>
 );
