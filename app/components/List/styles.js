@@ -1,5 +1,5 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
-import { StyleSheet }  from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = EStyleSheet.create({
     row: {
@@ -21,13 +21,13 @@ const styles = EStyleSheet.create({
         height: StyleSheet.hairlineWidth,
     },
     icon: {
+    },
+    iconVisible: {
         backgroundColor: 'transparent',
         width: 30,
         height: 30,
         borderRadius: 15,
-    },
-    iconVisible: {
-        backgroundColor: 'red',
+        backgroundColor: '$primayGreen',
     }
 });
 

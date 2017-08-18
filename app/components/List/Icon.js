@@ -5,7 +5,7 @@ import styles from './styles';
 
 const Icon = () => (
     <View style={styles.icon}>
-        <Image source={require('./icon/check.png')} style={styles.iconVisible} />
+        <Image resizeMode='contain' source={require('./icon/check.png')} style={styles.iconVisible} />
     </View>
 );
 
