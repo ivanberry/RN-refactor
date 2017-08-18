@@ -3,7 +3,7 @@ import { View, Image } from 'react-native';
 
 import styles from './styles';
 
-const Icon = ({ checkmarked, visible }) => {
+const Icon = ({ checkmarked, visible=true }) => {
     const iconStyle = [styles.icon];
 
     if (visible) {

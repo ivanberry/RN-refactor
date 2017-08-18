@@ -22,9 +22,9 @@ const styles = EStyleSheet.create({
     },
     icon: {
         backgroundColor: 'transparent',
-        width: 30,
-        height: 30,
-        borderRadius: 15,
+        width: 20,
+        height: 20,
+        borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -32,7 +32,7 @@ const styles = EStyleSheet.create({
         backgroundColor: '$primayGreen',
     },
     checkmarked: {
-        width: 16,
+        width: 12,
     }
 });
 
