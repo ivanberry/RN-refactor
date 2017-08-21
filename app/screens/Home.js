@@ -6,6 +6,7 @@ import { InputWithButton } from '../components/TextInput';
 import { ClearButton } from '../components/Buttons';
 import { LastConverted } from '../components/Text';
 import { Header } from '../components/Header';
+import PropTypes from 'prop-types';
 
 const TEMP_BASS_CURRENCY = 'CNY';
 const TEMP_QUOTE_CURRENCY = 'USD';
@@ -15,8 +16,18 @@ const TEMP_CURRENCY_RATE = 0.7;
 const TEMP_CONVERTER_TIME = new Date();
 
 class Home extends Component {
-    handlerPress = () => {
+    static propTypes = {
+        navigation: PropTypes.object,
+    };
+
+    handlerBasePress = () => {
         console.log('base press');
+        this.props.navigation.navigate('CurrencyList', {title: 'Base currency list'});
+    }
+
+    handlerQuotePress = () => {
+        console.log('quote press');
+        this.props.navigation.navigate('CurrencyList', {title: 'Quate currency list'})
     }
 
     handleSwapCurrency = () => {
@@ -25,6 +36,7 @@ class Home extends Component {
 
     handleOptionOnPress = () => {
         console.log('option pressed');
+        this.props.navigation.navigate('Options');
     }
 
     render() {
@@ -36,14 +48,14 @@ class Home extends Component {
                 <Logo />
                 <InputWithButton
                     buttonText={TEMP_BASS_CURRENCY}
-                    onPress={this.handlerPress}
+                    onPress={this.handlerBasePress}
                     defaultValue={TEMP_BASE_PRICE}
                     keyboardType='numeric'
 
                 />
                 <InputWithButton
                     buttonText={TEMP_QUOTE_CURRENCY}
-                    onPress={this.handlerPress}
+                    onPress={this.handlerQuotePress}
                     defaultValue={TEMP_QUOTE_PRIE}
                     editable={false}
                 />
