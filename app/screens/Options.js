@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, StatusBar, Platform } from 'react-native';
+import { ScrollView, StatusBar, Platform, Linking } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import PropTypes from 'prop-types';
 
@@ -16,11 +16,12 @@ class Options extends Component {
 
     handleThemesPress = () => {
         console.log('themes');
+        this.props.navigation.navigate('Themes');
     }
 
     handleSitePress = () => {
         console.log('site');
-        this.props.navigation.navigate('Themes');
+        Linking.openURL('http://v2ex.com').catch(() => alert('An error happended'));
     }
 
     render() {
@@ -29,15 +30,15 @@ class Options extends Component {
                 <StatusBar translucent={false} barStyle='default' />
                 <ListItem
                     text="风车理财"
-                    onPress={this.handleSitePress}
+                    onPress={this.handleThemesPress}
                     customIcon={<Ionicons name={`${ICON_PREFIX}-arrow-forward`} size={ICON_SIZE} color={ICON_COLOR} />}
                 />
                 <Separator />
                 <ListItem
                     text="风车金融"
-                    onPress={this.handleThemesPress}
+                    onPress={this.handleSitePress}
                     customIcon={<Ionicons name={`${ICON_PREFIX}-link`} size={ICON_SIZE} color={ICON_COLOR} />}
-                />    
+                />
             </ScrollView>
         )
     }

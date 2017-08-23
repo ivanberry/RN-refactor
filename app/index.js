@@ -3,6 +3,8 @@ import React from 'react';
 import EStylesSheet from 'react-native-extended-stylesheet';
 import Navigator from './config/routes';
 
+import './reducers';
+
 EStylesSheet.build({
   $primaryBlue: '#4f6d7a',
   $white: '#fff',
