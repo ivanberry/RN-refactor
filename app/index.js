@@ -1,7 +1,9 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 
 import EStylesSheet from 'react-native-extended-stylesheet';
 import Navigator from './config/routes';
+import store from './config/store';
 
 import './reducers';
 
@@ -17,4 +19,8 @@ EStylesSheet.build({
 });
 
 
-export default () => <Navigator />
+export default () => (
+  <Provider store={store}>
+    <Navigator />
+  </Provider>
+)

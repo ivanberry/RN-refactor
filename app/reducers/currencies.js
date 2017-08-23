@@ -1,4 +1,4 @@
-import { CHANGE_CURRENCY_AMOUNT, SWAP_CURRENCY, swapCurrency, changeCurrencyAmount } from '../actions/currencies';
+import { CHANGE_CURRENCY_AMOUNT, SWAP_CURRENCY } from '../actions/currencies';
 
 const initialState = {
     baseCurrency: 'CNY',
@@ -12,18 +12,18 @@ const reducer = (state = initialState, action) => {
         case CHANGE_CURRENCY_AMOUNT:
             return {
                 ...state,
-                amount: action.amount,
+                amount: action.amount || 0,
             };
         case SWAP_CURRENCY:
+            return {
+                ...state,
+                baseCurrency: state.quoteCurrency,
+                quoteCurrency: state.baseCurrency,
+            };
         default:
             return state;    
     }
 };
-
-console.log(initialState);
-console.log('swap',reducer(initialState, swapCurrency()));
-console.log('change',reducer(initialState, changeCurrencyAmount('123')));
-
 export default reducer;
 
 
