@@ -5,8 +5,6 @@ import EStylesSheet from 'react-native-extended-stylesheet';
 import Navigator from './config/routes';
 import store from './config/store';
 
-import './reducers';
-
 EStylesSheet.build({
   $primaryBlue: '#4f6d7a',
   $white: '#fff',
@@ -21,6 +19,6 @@ EStylesSheet.build({
 
 export default () => (
   <Provider store={store}>
-    <Navigator />
+    <Navigator onNavigationStateChange={null} />
   </Provider>
 )
