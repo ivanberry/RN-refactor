@@ -20,6 +20,13 @@ class CurrencyList extends Component {
     }
 
     render() {
+        let comparisonCurrency = this.props.baseCurrency;
+        if (this.props.navigation.state.params.type === 'quote') {
+            comparisonCurrency = this.props.quoteCurrency;
+        }
+
+        console.log(comparisonCurrency);
+
         return (
             <View style={{ flex: 1 }}>
                 <StatusBar translucent={false} barStyle="default" />
@@ -28,7 +35,7 @@ class CurrencyList extends Component {
                     renderItem={({ item }) => (
                         <ListItem
                             text={item}
-                            selected={item === 'CAD'}
+                            selected={item === comparisonCurrency}
                             onPress={() => this.hanlePress(item)}
                             checkmarked={true}
                             visible={true}
@@ -44,4 +51,9 @@ class CurrencyList extends Component {
 
 }
 
-export default connect()(CurrencyList);
+const mapStateToProps = (state) => ({
+    baseCurrency: state.currencies.baseCurrency,
+    quoteCurrency: state.currencies.quoteCurrency,
+});
+
+export default connect(mapStateToProps)(CurrencyList);
