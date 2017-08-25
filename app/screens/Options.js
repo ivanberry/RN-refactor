@@ -29,7 +29,7 @@ class Options extends Component {
             <ScrollView>
                 <StatusBar translucent={false} barStyle='default' />
                 <ListItem
-                    text="风车理财"
+                    text="Themes"
                     onPress={this.handleThemesPress}
                     customIcon={<Ionicons name={`${ICON_PREFIX}-arrow-forward`} size={ICON_SIZE} color={ICON_COLOR} />}
                 />

@@ -12,7 +12,10 @@ EStylesSheet.build({
   $inputText: '#797979',
   $lightGray: '#f0f0f0',
   $darkText: '#343434',
-  $primayGreen: '#00cdbc',
+  $primaryGreen: '#00cdbc',
+  $primaryBlue: '#4F6D7A',
+  $primaryOrange: '#D57A66',
+  $primaryPurple: '#9E768F',
   // outline: 1, //show the block view of element
 });
 

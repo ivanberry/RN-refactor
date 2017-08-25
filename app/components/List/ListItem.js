@@ -5,13 +5,13 @@ import PropTypes from 'prop-types';
 import Icon from './Icon';
 import styles from './styles';
 
-const ListItem = ({ text, onPress, selected, checkmarked, visible, customIcon = null }) => (
+const ListItem = ({ text, onPress, selected, checkmarked, visible, customIcon = null, iconBackground }) => (
     <TouchableHighlight onPress={onPress}>
         <View style={styles.row}>
             <Text style={styles.text}>
                 {text}
             </Text>
-            {selected ? <Icon checkmarked={checkmarked} visible={visible} /> : null}
+            {selected ? <Icon checkmarked={checkmarked} visible={visible} iconBackground={iconBackground} /> : null}
             {customIcon}
         </View>
     </TouchableHighlight>

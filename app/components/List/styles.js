@@ -29,7 +29,7 @@ const styles = EStyleSheet.create({
         alignItems: 'center',
     },
     iconVisible: {
-        backgroundColor: '$primayGreen',
+        backgroundColor: '$primaryGreen',
     },
     checkmarked: {
         width: 12,
