@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 import { Text, FlatList, View, StatusBar } from 'react-native';
+import { connect } from 'react-redux';
 
 import currencies from '../data/currencies';
 import { ListItem, Separator } from '../components/List';
+import { changeBaseCurrency, changeQuoteCurrency } from '../actions/currencies';
 
 class CurrencyList extends Component {
-    hanlePress = () => {
-        console.log('row press');
+    hanlePress = (currency) => {
+        const { type } = this.props.navigation.state.params;
+        console.log(type);
+        if (type === 'base') {
+            this.props.dispatch(changeBaseCurrency(currency));
+        } else {
+            this.props.dispatch(changeQuoteCurrency(currency));
+        }
+
+        this.props.navigation.goBack(null);
     }
 
     render() {
@@ -19,7 +29,7 @@ class CurrencyList extends Component {
                         <ListItem
                             text={item}
                             selected={item === 'CAD'}
-                            onPress={this.hanlePress}
+                            onPress={() => this.hanlePress(item)}
                             checkmarked={true}
                             visible={true}
                         />
@@ -34,4 +44,4 @@ class CurrencyList extends Component {
 
 }
 
-export default CurrencyList;
+export default connect()(CurrencyList);
