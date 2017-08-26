@@ -35,7 +35,7 @@ class Options extends Component {
                 />
                 <Separator />
                 <ListItem
-                    text="风车金融"
+                    text="V2EX"
                     onPress={this.handleSitePress}
                     customIcon={<Ionicons name={`${ICON_PREFIX}-link`} size={ICON_SIZE} color={ICON_COLOR} />}
                 />

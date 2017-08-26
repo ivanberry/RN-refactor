@@ -1,5 +1,15 @@
 {
   "expo": {
-    "sdkVersion": "19.0.0"
-  }
+      "name": "Your App Name",
+      "icon": "./icon/icon.png",
+      "version": "1.0.0",
+      "slug": "react-native-currency-calculator",
+      "sdkVersion": "19.0.0",
+      "ios": {
+            "bundleIdentifier": "com.yourcompany.yourappname"
+          },
+      "android": {
+            "package": "com.yourcompany.yourappname"
+          }
+     }
 }
