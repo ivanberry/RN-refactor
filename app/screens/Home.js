@@ -10,7 +10,7 @@ import { LastConverted } from '../components/Text';
 import { Header } from '../components/Header';
 import PropTypes from 'prop-types';
 
-import { swapCurrency, changeCurrencyAmount } from '../actions/currencies';
+import { swapCurrency, changeCurrencyAmount, getInitialConversions } from '../actions/currencies';
 
 const TEMP_BASE_PRICE = '100';
 const TEMP_QUOTE_PRIE = '80';
@@ -27,15 +27,18 @@ class Home extends Component {
         isFetching: PropTypes.bool,
         LastConvertedDate: PropTypes.object,
         primaryColor: PropTypes.string,
+        textColor: PropTypes.string,
     };
 
+    componentWillMount() {
+        this.props.dispatch(getInitialConversions());
+    }
+
     handlerBasePress = () => {
-        console.log('base press');
         this.props.navigation.navigate('CurrencyList', { title: 'Base currency list', type: 'base' });
     }
 
     handlerQuotePress = () => {
-        console.log('quote press');
         this.props.navigation.navigate('CurrencyList', { title: 'Quate currency list', type: 'quote' })
     }
 
@@ -44,7 +47,6 @@ class Home extends Component {
     }
 
     handleOptionOnPress = () => {
-        console.log('option pressed');
         this.props.navigation.navigate('Options');
     }
 
@@ -96,7 +98,7 @@ class Home extends Component {
     }
 }
 
-//TODO: how did this happend to change state to props
+//Why didi this will execute times?
 const mapStateToProps = (state) => {
     console.log(state);
     const baseCurrency = state.currencies.baseCurrency;
