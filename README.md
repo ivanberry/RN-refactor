@@ -1,8 +1,8 @@
 ## Currency Calculator
 
-[main screen](https://www.notion.so/Redux-Basic-09640dc6cebe46db8208e74948897718#1d76ea7e478d4e8cb3595d023b864b9e)
+![screen.png](https://i.loli.net/2017/08/26/59a16b454c8c2.png)
 
-## Tech Stack
+## Stack
 - react
 - react-native
 - react-redux
