@@ -1,8 +1,4 @@
 import { takeEvery, select, put, call } from 'redux-saga/effects';
-
-//1.initial data
-//2.swap
-//3.change currency
 import { SWAP_CURRENCY, CHANGE_BASE_CURRENCY, INIT_UPON_STATE, CONVERSION_RESULT, CONVERSION_ERROR } from '../actions/currencies';
 
 const getLatestRate = currency => fetch(`http://api.fixer.io/latest?base=${currency}`);
