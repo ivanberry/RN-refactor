@@ -1,6 +1,6 @@
 {
   "expo": {
-      "name": "Your App Name",
+      "name": "Currency",
       "icon": "./icon/icon.png",
       "version": "1.0.0",
       "slug": "react-native-currency-calculator",
