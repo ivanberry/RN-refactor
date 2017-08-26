@@ -1,7 +1,7 @@
 import { CHANGE_PRIMARY_COLOR } from '../actions/theme';
 
 const initialState = {
-    primarColor: '#4f6d7a',
+    primaryColor: '#4f6d7a',
 };
 
 export default (state = initialState, action) => {
@@ -9,7 +9,7 @@ export default (state = initialState, action) => {
         case CHANGE_PRIMARY_COLOR:
             return {
                 ...state,
-                primarColor: action.color,
+                primaryColor: action.color,
             };
         default:
             return state;
