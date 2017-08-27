@@ -85,7 +85,7 @@ class Home extends Component {
                     <LastConverted
                         base={this.props.baseCurrency}
                         quote={this.props.quoteCurrency}
-                        data={TEMP_CONVERTER_TIME}
+                        data={this.props.lastConvertedDate}
                         conversionRate={this.props.conversionRate}
                     />
                     <ClearButton
@@ -110,9 +110,9 @@ const mapStateToProps = (state) => {
         baseCurrency,
         quoteCurrency,
         amount: state.currencies.amount,
-        conversionRate: rates[quoteCurrency] || 0,
+        conversionRate: rates[quoteCurrency] || 1,
         isFetching: conversionSelector.isFetching,
-        LastConvertedDate: conversionSelector.date ? new Date(conversionSelector.date) : new Date(),
+        lastConvertedDate: conversionSelector.date ? new Date(conversionSelector.date) : new Date(),
         primaryColor: state.theme.primaryColor,
     };
 }

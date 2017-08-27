@@ -8,6 +8,7 @@ const initialState = {
 };
 
 const setConversions = (state, action) => {
+    console.log(state, action);
     let conversion = {
         isFetching: true,
         data: '',

@@ -9,7 +9,6 @@ import { changeBaseCurrency, changeQuoteCurrency } from '../actions/currencies';
 class CurrencyList extends Component {
     hanlePress = (currency) => {
         const { type } = this.props.navigation.state.params;
-        console.log(type);
         if (type === 'base') {
             this.props.dispatch(changeBaseCurrency(currency));
         } else {
